@@ -13,3 +13,10 @@
 
 - JavaScript (ES6+)
 - Node.js (для запуску тестів)
+- Jest (автоматичне тестування коду)
+- npm (встановлює бібліотеки та залежності)
+
+## Щоб запустити тест
+- npm install
+- npm audit fix (optional)
+- npm test src/currentDirectory
