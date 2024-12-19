@@ -1,6 +1,6 @@
 module.exports = { filterActiveUsers }
 
-const users = [
+const dataFromServer = [
     { name: "John", age: 25, subscription: "active" },
     { name: "Jane", age: 17, subscription: "inactive" },
     { name: "Alice", age: 30, subscription: "active" },
@@ -8,8 +8,12 @@ const users = [
     { name: "Charlie", age: 19, subscription: "active" },
 ];
 
-console.log(filterActiveUsers(users));
+console.log(filterActiveUsers(dataFromServer));
 
 // output ["John", "Alice", "Charlie"]
 
-// write your code here
+function filterActiveUsers(data) {
+    return data
+        .filter(user => user.age > 18 && user.subscription === 'active')
+        .map(user => user.name)
+}
